@@ -3,7 +3,7 @@
 
 ## makeCacheMatrix takes an invertible square matrix as an argument 
 ## initially sets the inverse to null, then adds the original matrix and functions
-## to a list
+## to a list, makeCacheMatrix returns this list.
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-## cacheSolve takes the list from makeCacheMatrix and checks if the inverse has been calculated,
+## cacheSolve takes the list from makeCacheMatrix as an argument and checks if the inverse has been calculated,
 ## if not, it calulates it via the solve() function, and calls setinverse() from the list, which caches
 ## the inverse, 
 ## if it does exist, it retrieves it from the cache via the function getinverse. this way the 
